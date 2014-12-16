@@ -1,0 +1,37 @@
+{
+  "name": "ng-backstretch",
+  "version": "1.0.0",
+  "description": "A native Angular directive derived from the jQuery Backstretch plugin (http://srobbin.com/jquery-plugins/backstretch)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rprovost/ng-backstretch.git"
+  },
+  "keywords": [
+    "angular",
+    "modules"
+  ],
+  "author": "Ryan Provost",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rprovost/ng-backstretch/issues"
+  },
+  "homepage": "https://github.com/rprovost/ng-backstretch",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-karma": "^0.9.0",
+    "grunt-ngdocs": "^0.2.6",
+    "jasmine-core": "^2.1.3",
+    "karma": "^0.12.28",
+    "karma-coverage": "^0.2.7",
+    "karma-jasmine": "^0.3.2",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "phantomjs": "^1.9.12"
+  }
+}
