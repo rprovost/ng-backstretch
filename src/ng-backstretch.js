@@ -63,10 +63,10 @@ directive('backstretch', ['$window', '$log', function($window, $log) {
           var background_css = {left: 0, top: 0, width: 'auto', height: 'auto'};
 
           // set some initial calculations
-          var root_width = element.innerWidth(),
+          var root_width = element[0].offsetWidth,
               background_width = root_width,
 
-              root_height = element.innerHeight(),
+              root_height = element[0].offsetHeight,
               background_height = background_width / scope.ratio,
 
               background_offset;
