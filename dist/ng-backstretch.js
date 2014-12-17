@@ -85,8 +85,8 @@ directive('backstretch', ['$window', '$log', function($window, $log) {
           }
 
           // set the css for the width and height
-          background_css.width = background_width;
-          background_css.height = background_height;
+          background_css.width = background_width + 'px';
+          background_css.height = background_height + 'px';
 
           // apply the appropriate styles to the wrapper and image
           scope.wrapper.css({width: root_width, height: root_height});
