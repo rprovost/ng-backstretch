@@ -12,18 +12,23 @@ module.exports = function(grunt) {
         },
         uglify: {
             source: {
-                files: {
-                    'dist/ng-backstretch.js': ['src/ng-backstretch.js']
-                }
-            },
-            minified: {
                 options: {
                     sourceMap: true,
-                    sourceMapIncludeSources: true
+                    sourceMapIncludeSources: true,
+                    compress: {
+                        drop_console: true
+                    }
                 },
                 files: {
                     'dist/ng-backstretch.min.js': ['src/ng-backstretch.js']
                 }
+            }
+        },
+        copy: {
+            source: {
+                files: [
+                    {'dist/ng-backstretch.js': ['src/ng-backstretch.js']}
+                ]
             }
         },
         karma: {
@@ -49,7 +54,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-karma');
 
-    grunt.registerTask('build', ['jshint', 'uglify:source', 'uglify:minified']);
+    grunt.registerTask('build', ['jshint', 'uglify:source', 'copy:source']);
 };
