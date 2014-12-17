@@ -10,6 +10,7 @@
     "angular",
     "modules"
   ],
+  "main": "index.js",
   "license": "MIT",
   "ignore": [
     "**/.*",
