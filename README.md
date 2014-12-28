@@ -6,7 +6,7 @@ A native Angular directive derived from the jQuery Backstretch plugin (http://sr
 
 Installation is easy since the only external dependency is AngularJS
 
-When you are done downloading all the dependencies and project files the only remaining part is to add dependencies on the `ui.bootstrap` AngularJS module:
+When you are done downloading all the dependencies and project files the only remaining part is to add dependencies on the `ng-backstretch` AngularJS module:
 
 ```javascript
 angular.module('myModule', ['ng-backstretch']);
