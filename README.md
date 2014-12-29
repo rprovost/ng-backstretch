@@ -12,8 +12,9 @@ When defining your AngularJS project, all you need to do is inject the `ng-backs
 angular.module('myModule', ['ng-backstretch']);
 ```
 
-Project files are also available through your favourite package manager:
-* **Bower**: `bower install ng-backstretch`
+Project files are also available through Bower:
+
+`bower install ng-backstretch`
 
 ## Usage
 Simply add the required directive attributes to any DOM element.
