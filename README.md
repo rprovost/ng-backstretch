@@ -16,7 +16,7 @@ Include the Backstretch library in your project anywhere after Angular is includ
 <script src="bower_components/dist/ng-backstretch.min.js"></script>
 ```
 
-Now, just inject the `ng-backstretch` module into your Angular project:
+Inject the `ng-backstretch` module into your Angular project:
 
 ```javascript
 angular.module('myApp', ['ng-backstretch']);
