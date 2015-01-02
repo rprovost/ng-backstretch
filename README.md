@@ -4,20 +4,27 @@ A native Angular directive derived from the jQuery Backstretch plugin (http://sr
 
 ## Installation
 
-Installation is easy since the only external dependency is AngularJS
-
-When defining your AngularJS project, all you need to do is inject the `ng-backstretch` module into your Angular project:
+Download the project with Bower:
 
 ```javascript
-angular.module('myModule', ['ng-backstretch']);
+bower install ng-backstretch
 ```
 
-Project files are also available through Bower:
+Include the Backstretch library in your project anywhere after Angular is included:
 
-`bower install ng-backstretch`
+```html
+<script src="bower_components/dist/ng-backstretch.min.js"></script>
+```
+
+Now, just inject the `ng-backstretch` module into your Angular project:
+
+```javascript
+angular.module('myApp', ['ng-backstretch']);
+```
+
 
 ## Usage
-Simply add the required directive attributes to any DOM element.
+Add the required attributes to any DOM element.
 
 ```html
 <div backstretch backstretch-url="http://placehold.it/1600x1600"></div>
