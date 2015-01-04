@@ -13,7 +13,7 @@ bower install ng-backstretch
 Include ng-backstretch in your project:
 
 ```html
-<script src="bower_components/dist/ng-backstretch.min.js"></script>
+<script src="bower_components/ng-backstretch/dist/ng-backstretch.min.js"></script>
 ```
 
 Inject the `ng-backstretch` module into your Angular project:
