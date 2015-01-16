@@ -1,6 +1,6 @@
 {
   "name": "ng-backstretch",
-  "version": "v.0.1.0-beta.2",
+  "version": "v0.1.1-beta",
   "description": "A native Angular directive derived from the jQuery Backstretch plugin (http://srobbin.com/jquery-plugins/backstretch)",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,7 @@
     "karma-coverage": "^0.2.7",
     "karma-jasmine": "^0.3.2",
     "karma-phantomjs-launcher": "^0.1.4",
-    "phantomjs": "^1.9.12"
+    "phantomjs": "^1.9.12",
+    "karma-phantomjs-launcher": "^0.1.4"
   }
 }
