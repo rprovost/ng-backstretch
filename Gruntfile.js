@@ -40,21 +40,7 @@ module.exports = function(grunt) {
           frameworks: ['jasmine'],
           browsers: ['PhantomJS'],
           plugins: ['karma-jasmine', 'karma-coverage', 'karma-phantomjs-launcher'],
-          files: [
-            'bower_components/angular/angular.js',
-            'bower_components/angular-mocks/angular-mocks.js',
-            'src/**/*.js'
-          ]
-        }
-      },
-
-      single_run: {
-        singleRun: true,
-        options: {
-          frameworks: ['jasmine'],
-          browsers: ['PhantomJS'],
-          plugins: ['karma-jasmine', 'karma-coverage', 'karma-phantomjs-launcher'],
-          reporters: ['coverage','progress'],
+          reporters: ['coverage', 'progress'],
           coverageReporter: {type: 'text'},
           files: [
             'bower_components/angular/angular.js',
