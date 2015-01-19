@@ -1,0 +1,35 @@
+<html ng-app="ng-backstretch-demo">
+<head>
+  <title>ng-backstretch demo</title>
+
+  <style type="text/css">
+    .backstretch {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.js"></script>
+  <script type="text/javascript" src="../src/ng-backstretch.js"></script>
+
+  <script type="text/javascript">
+    angular.module('ng-backstretch-demo', ['ng-backstretch'])
+
+    .controller('demoController', function($scope){
+      $scope.images = [
+        'http://dl.dropbox.com/u/515046/www/garfield-interior.jpg',
+        'http://dl.dropbox.com/u/515046/www/outside.jpg',
+        'http://dl.dropbox.com/u/515046/www/cheers.jpg'
+      ];
+    });
+  </script>
+</head>
+
+<body>
+
+  <div class="demo" ng-controller="demoController">
+    <div class="backstretch" backstretch backstretch-images="images" backstretch-duration="5000" backstretch-fade="1"></div>  
+  </div>
+
+</body>
+</html>
