@@ -14,6 +14,7 @@ module.exports = function(grunt) {
         options: {
           sourceMap: true,
           sourceMapIncludeSources: true,
+          preserveComments: 'some',
           compress: {
             drop_console: true
           }
