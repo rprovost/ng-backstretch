@@ -4,7 +4,7 @@
   "description": "A native Angular directive derived from the jQuery Backstretch plugin (http://srobbin.com/jquery-plugins/backstretch)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt karma"
   },
   "repository": {
     "type": "git",
