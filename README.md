@@ -51,7 +51,7 @@ angular.module('myAPP')
 A slideshow duration and fade period can be specified through additional directive attributes.
 
 ```html
-<div class="backstretch" backstretch backstretch-images="images" backstretch-duration="5000" backstretch-fade="1"></div>  
+<div backstretch backstretch-images="images" backstretch-duration="5000" backstretch-fade="1"></div>  
 ```
 
 `backstretch-duration` is specified in milliseconds and defaults to `5000` if none is specified.
