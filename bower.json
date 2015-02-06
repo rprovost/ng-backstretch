@@ -10,7 +10,10 @@
     "angular",
     "modules"
   ],
-  "main": "index.js",
+  "main": [
+    "dist/ng-backstretch.min.js",
+    "dist/ng-backstretch.min.js.map"
+  ],
   "license": "MIT",
   "ignore": [
     "**/.*",
