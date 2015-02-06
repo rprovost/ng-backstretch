@@ -125,18 +125,23 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
         background_css.height = background_height + 'px';
 
         // apply the appropriate styles to the wrapper and image
-        scope.wrapper.css({width: root_width, height: root_height});
-        scope.image.css(background_css);
+        scope.wrapper.css({ width: root_width, height: root_height });
+
+        for(var i = 0; i < scope.wrapper.children().length; i++)
+        {
+            var img = angular.element(scope.wrapper.children()[i]);
+            img.css(background_css);
+        }
       };
 
       scope.show = function(index) {
 
-        var element = scope.wrapper.children()[index];
-        var image = angular.element(element);
+          var element = scope.wrapper.children()[index];
+       scope.image = angular.element(element);
 
         // only one image
         if (scope.images.length === 1) {
-          image.css({opacity:1});
+            scope.image.css({ opacity: 1 });
           return;
         }
 
@@ -146,11 +151,11 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
         }
 
         // show the image since it's finished loading
-        image.css({opacity:1});
+        scope.image.css({ opacity: 1 });
 
         // hide it once the duration has been reached
         $timeout(function(){
-          image.css({opacity:0});
+            scope.image.css({ opacity: 0 });
         }, scope.duration);
 
         $timeout(function(){
