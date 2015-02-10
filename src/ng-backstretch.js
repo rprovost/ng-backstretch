@@ -129,15 +129,15 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
 
         for(var i = 0; i < scope.wrapper.children().length; i++)
         {
-            var img = angular.element(scope.wrapper.children()[i]);
-            img.css(background_css);
+          var img = angular.element(scope.wrapper.children()[i]);
+          img.css(background_css);
         }
       };
 
       scope.show = function(index) {
 
-          var element = scope.wrapper.children()[index];
-       scope.image = angular.element(element);
+        var element = scope.wrapper.children()[index];
+        scope.image = angular.element(element);
 
         // only one image
         if (scope.images.length === 1) {
