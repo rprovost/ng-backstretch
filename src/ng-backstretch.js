@@ -141,7 +141,7 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
 
         // only one image
         if (scope.images.length === 1) {
-            scope.image.css({opacity:1});
+          scope.image.css({opacity:1});
           return;
         }
 
@@ -155,7 +155,7 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
 
         // hide it once the duration has been reached
         $timeout(function(){
-            scope.image.css({opacity:0});
+          scope.image.css({opacity:0});
         }, scope.duration);
 
         $timeout(function(){
