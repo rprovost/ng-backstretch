@@ -127,8 +127,7 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
         // apply the appropriate styles to the wrapper and image
         scope.wrapper.css({ width: root_width, height: root_height });
 
-        for(var i = 0; i < scope.wrapper.children().length; i++)
-        {
+        for(var i = 0; i < scope.wrapper.children().length; i++) {
           var img = angular.element(scope.wrapper.children()[i]);
           img.css(background_css);
         }
