@@ -11,9 +11,9 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
   return {
     restrict: 'A',
     scope: {
-      images: '&backstretchImages',
-      duration: '&backstretchDuration',
-      fade: '&backstretchFade'
+      images: '=backstretchImages',
+      duration: '=?backstretchDuration',
+      fade: '=?backstretchFade'
     },
     link: function(scope, element, attributes) {
 
@@ -21,9 +21,9 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
        * e.g. <div backstretch backstretch-url="'/path/to/image.jpg'">
        * So, we need to turn this back into an array.
        */
-      scope.images = Array.isArray(scope.images()) ? scope.images() : [scope.images()];
-      scope.duration = scope.duration() || 5000;
-      scope.fade = scope.fade() || 1;
+      scope.images = Array.isArray(scope.images) ? scope.images : [scope.images];
+      scope.duration = !angular.isUndefined(scope.duration) ? scope.duration : 5000;
+      scope.fade = !angular.isUndefined(scope.fade) ? scope.fade : 1;
 
       // We need at least one image or method name
       if (scope.images.length === 0) {
