@@ -145,7 +145,11 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
 
         // only one image
         if (scope.images.length === 1) {
-          scope.image.addClass('active');
+          if(scope.css_transition === 'true') {
+            scope.image.addClass('active');
+          } else {
+            scope.image.css({opacity:1});  
+          }
           return;
         }
 
