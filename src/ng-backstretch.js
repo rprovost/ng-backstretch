@@ -169,7 +169,7 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
             // remove "active" class when duration has been reached
             scope.image.removeClass('active');
           } else {
-            // show the image since it's finished loading
+            // hide it once the duration has been reached
             scope.image.css({opacity:0});
           }
           
