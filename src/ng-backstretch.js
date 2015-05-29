@@ -12,7 +12,9 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
     restrict: 'A',
     scope: {
       images: '&backstretchImages',
-      duration: '&backstretchDuration'
+      duration: '&backstretchDuration',
+      fade: '&backstretchFade',
+      css_transition: '@backstretchCssTransition'
     },
     link: function(scope, element, attributes) {
 
@@ -22,6 +24,7 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
        */
       scope.images = Array.isArray(scope.images()) ? scope.images() : [scope.images()];
       scope.duration = scope.duration() || 5000;
+      scope.fade = scope.fade() || 0;
 
       // We need at least one image or method name
       if (scope.images.length === 0) {
@@ -58,6 +61,12 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
           zIndex: -999999
         }
       };
+
+      // if we do not use css transition
+      if(scope.css_transition !== 'true') {
+        styles.image.opacity = 0;
+        styles.image.transition = 'all '+scope.fade+'s';
+      }
 
       // create the scope.wrapper element
       scope.wrapper = angular.element('<div class="backstretch"></div>');
@@ -145,12 +154,25 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
           scope.index = 0;
         }
 
-        // Apply "active" since it's finished loading
-        scope.image.addClass('active');
+        if(scope.css_transition === 'true') {
+          // apply "active" class since it's finished loading
+          scope.image.addClass('active');
+        } else {
+          // show the image since it's finished loading
+          scope.image.css({opacity:1});
+        }
+        
 
-        // Remove "active" class when duration has been reached
+        
         $timeout(function(){
-          scope.image.removeClass('active');
+          if(scope.css_transition === 'true') {
+            // remove "active" class when duration has been reached
+            scope.image.removeClass('active');
+          } else {
+            // show the image since it's finished loading
+            scope.image.css({opacity:0});
+          }
+          
         }, scope.duration);
 
         $timeout(function(){
