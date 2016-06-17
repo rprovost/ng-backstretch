@@ -1,6 +1,6 @@
 {
   "name": "ng-backstretch",
-  "version": "v0.1.2-beta",
+  "version": "v0.1.3-beta",
   "description": "A native Angular directive derived from the jQuery Backstretch plugin (http://srobbin.com/jquery-plugins/backstretch)",
   "main": "index.js",
   "scripts": {

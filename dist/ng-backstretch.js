@@ -23,7 +23,7 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
        */
       scope.images = Array.isArray(scope.images()) ? scope.images() : [scope.images()];
       scope.duration = scope.duration() || 5000;
-      scope.fade = scope.fade() || 1;
+      scope.fade = scope.fade() || 0;
 
       // We need at least one image or method name
       if (scope.images.length === 0) {
@@ -46,7 +46,7 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
           height: '100%',
           width: '100%',
           zIndex: -999998,
-          position: 'absolute',
+          position: 'absolute'
         },
         image: {
           position: 'absolute',
@@ -102,7 +102,8 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
         var root_width = element[0].offsetWidth,
             background_width = root_width,
 
-            root_height = element[0].offsetHeight,
+            // Check which height-element that should be used
+            root_height = element[0].offsetHeight > 0 ? element[0].offsetHeight : element[0].offsetParent.offsetHeight,
             background_height = background_width / scope.ratio,
 
             background_offset;
