@@ -168,6 +168,11 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
 
       // make sure to update the image sizes when the page scales/changes
       angular.element($window).bind('resize', scope.resize);
+
+      // Unbinds resize listener on $destroy event. It prevents listener to be called, which caused error mentioned in #22
+      scope.$on('$destroy', function() {
+        angular.element($window).unbind('resize', scope.resize);
+      });
     }
   };
 }]);
