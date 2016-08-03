@@ -1,6 +1,9 @@
 language: node_js
 node_js:
-  - "0.10.35"
-before_install: npm install -g bower grunt-cli karma-cli phantomjs
-install: npm install
-install: bower install
+  - "4.2"
+install:
+  - npm install -g grunt bower karma
+  - npm install
+  - bower install
+script:
+  - grunt karma
