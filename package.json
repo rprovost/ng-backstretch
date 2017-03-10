@@ -33,7 +33,6 @@
     "karma-coverage": "^0.2.7",
     "karma-jasmine": "^0.3.2",
     "karma-phantomjs-launcher": "^0.1.4",
-    "phantomjs": "^1.9.12",
-    "karma-phantomjs-launcher": "^0.1.4"
+    "phantomjs": "^1.9.12"
   }
 }
