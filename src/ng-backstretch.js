@@ -5,7 +5,7 @@
  * Copyright (c) 2014-2015 Ryan Provost
  * Licensed under the MIT license.
  */
-angular.module('ng-backstretch', []).
+var ngBackstretch = angular.module('ng-backstretch', []).
 
 directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
   return {
@@ -176,3 +176,5 @@ directive('backstretch', ['$window', '$timeout', function($window, $timeout) {
     }
   };
 }]);
+
+module.exports(ngBackstretch.name);
